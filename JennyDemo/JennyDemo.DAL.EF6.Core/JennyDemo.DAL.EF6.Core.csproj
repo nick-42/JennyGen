@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\JennyDemo.DAL.EF6.Framework\Context\JennyContext.cs" Link="Context\JennyContext.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EntityFramework" Version="6.4.4" PrivateAssets="Compile" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\Jenny.DAL.Common\Jenny.DAL.Common.csproj" />
+		<ProjectReference Include="..\Jenny.DAL.EF6\Jenny.DAL.EF6.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Jenny.DOG.Common\Jenny.DOG.Common.csproj" />
+		<ProjectReference Include="..\JennyDemo.DOG\JennyDemo.DOG.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Context\" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.ComponentModel.Composition" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Jenny.MEF.Coder">
+			<HintPath>..\.jenny\Jenny.MEF.Coder.dll</HintPath>
+		</Reference>
+		<Reference Include="Jenny.MEF.Config">
+			<HintPath>..\.jenny\Jenny.MEF.Config.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

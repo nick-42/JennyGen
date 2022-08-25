@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" PrivateAssets="Compile" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" PrivateAssets="Compile" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Jenny.DOG.Common\Jenny.DOG.Common.csproj" />
+		<ProjectReference Include="..\Jenny.DAL.Common\Jenny.DAL.Common.csproj" />
+		<ProjectReference Include="..\Jenny.DAL.EFCore\Jenny.DAL.EFCore.csproj" PrivateAssets="Compile" />
+		<ProjectReference Include="..\JennyDemo.DOG\JennyDemo.DOG.csproj" />
+	</ItemGroup>
+
+</Project>

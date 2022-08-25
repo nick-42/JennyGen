@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_DDL.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JennyDemo.DAL.EF6.Core\JennyDemo.DAL.EF6.Core.csproj" />
+    <ProjectReference Include="..\JennyDemo.DOG\JennyDemo.DOG.csproj" />
+  </ItemGroup>
+
+</Project>

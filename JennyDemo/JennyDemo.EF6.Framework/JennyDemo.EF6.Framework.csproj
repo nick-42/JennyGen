@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FF9DF73-7765-4029-8E4E-29C01816CA19}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>JennyDemo.EF6.Framework</RootNamespace>
+    <AssemblyName>JennyDemo.EF6.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jenny.DAL.Common\Jenny.DAL.Common.csproj">
+      <Project>{dbd54589-cb4b-4955-81fe-3b3e83e46671}</Project>
+      <Name>Jenny.DAL.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jenny.DAL.EF6\Jenny.DAL.EF6.csproj">
+      <Project>{a53321ff-ca41-4ec3-906d-3c7bd8eef70d}</Project>
+      <Name>Jenny.DAL.EF6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jenny.DOG.Common\Jenny.DOG.Common.csproj">
+      <Project>{38fb02ad-27df-4441-88ca-6e61ac5d3298}</Project>
+      <Name>Jenny.DOG.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JennyDemo.DAL.EF6.Framework\JennyDemo.DAL.EF6.Framework.csproj">
+      <Project>{21e76f8f-f46e-4482-a1ec-8c59ed62edfd}</Project>
+      <Name>JennyDemo.DAL.EF6.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JennyDemo.DOG\JennyDemo.DOG.csproj">
+      <Project>{d2921f2b-13c4-411c-8bec-cf430fd9736e}</Project>
+      <Name>JennyDemo.DOG</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EntityFramework" Version="6.4.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Jenny.DAL.Common\Jenny.DAL.Common.csproj" />
+		<ProjectReference Include="..\Jenny.DOG.Common\Jenny.DOG.Common.csproj" />
+	</ItemGroup>
+
+</Project>

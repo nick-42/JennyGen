@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Jenny.Generate.Core": {
+      "commandName": "Project",
+      "commandLineArgs": "\"-ConfigExe:D:\\dev\\_SG\\Jenny\\JennyDemo\\JennyDemo.Config.EFCore\\bin\\Debug\\JennyDemo.Config.EFCore.dll\" \r\n\"-Command:RunTransform\" \r\n\"-SolutionDirpath:D:\\dev\\_SG\\Jenny\\JennyDemo\" \r\n\"-DbContextProject:JennyDemo.DAL.EFCore|D:\\dev\\_SG\\Jenny\\JennyDemo\\JennyDemo.DAL.EFCore\\bin\\Debug/net6.0\\JennyDemo.DAL.EFCore.dll\"",
+      "workingDirectory": "D:\\dev\\_SG\\Jenny\\JennyDemo\\JennyDemo.DAL.EFCore\\bin\\Debug/net6.0"
+    }
+  }
+}

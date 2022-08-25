@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Include href="KnownImageIds.vsct"/>
+	<Include href="VSGlobals.vsct"/>
+
+	<Commands package="guidJennyPackage">
+
+		<Groups>
+
+			<Group guid="guidJennyRunAllCmdSet" id="RunAllMenuGroup" priority="0x0600">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+			</Group>
+
+			<Group guid="guidJennyRunProjectCmdSet" id="RunProjectMenuGroup" priority="0x0600">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+			</Group>
+
+		</Groups>
+
+		<!-- This section defines the elements the user can interact with, like a menu command or a button
+        or combo box in a toolbar. -->
+		<Buttons>
+
+			<!-- To define a menu group you have to specify its ID, the parent menu and its display priority.
+          The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
+          the CommandFlag node.
+          You can add more than one CommandFlag node e.g.:
+              <CommandFlag>DefaultInvisible</CommandFlag>
+              <CommandFlag>DynamicVisibility</CommandFlag>
+          If you do not want an image next to your command, remove the Icon node /> -->
+
+			<Button guid="guidJennyRunAllCmdSet" id="cmdidJennyRunAll" priority="0x0100" type="Button">
+				<Parent guid="guidJennyRunAllCmdSet" id="RunAllMenuGroup" />
+				<Icon guid="guidImages" id="bmpPic1" />
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Jenny Run All</ButtonText>
+					<LocCanonicalName>.guidJennyRunAllCmdSet.cmdidJennyRunAll</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<Button guid="guidJennyRunProjectCmdSet" id="cmdidJennyRunProject" priority="0x0100" type="Button">
+				<Parent guid="guidJennyRunProjectCmdSet" id="RunProjectMenuGroup"/>
+				<Icon guid="guidImages" id="bmpPic2" />
+				<!--<CommandFlag>AllowParams</CommandFlag>-->
+				<!--<CommandFlag>DynamicVisibility</CommandFlag>-->
+				<Strings>
+					<ButtonText>Run Jenny</ButtonText>
+					<!--<CommandName>cmdidJennyRunOnProject</CommandName>-->
+				</Strings>
+			</Button>
+
+		</Buttons>
+
+		<Bitmaps>
+			<!--  The bitmap id is defined in a way that is a little bit different from the others:
+            the declaration starts with a guid for the bitmap strip, then there is the resource id of the
+            bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
+            inside a button definition. An important aspect of this declaration is that the element id
+            must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
+			<Bitmap guid="guidImages" href="Resources\Jenny.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+		</Bitmaps>
+
+	</Commands>
+
+	<Symbols>
+
+		<GuidSymbol name="guidJennyPackage" value="{525d1a6f-8e30-4552-bee8-70f2922695a0}">
+			<!--<IDSymbol name="RunAllCommand" value="0x0101" />-->
+			<!--<IDSymbol name="RunProjectCommand" value="0x0102" />-->
+		</GuidSymbol>
+
+		<GuidSymbol name="guidJennyRunAllCmdSet" value="{905121E8-CABD-47F2-A4EB-6C2073F12363}">
+			<IDSymbol name="RunAllMenuGroup" value="0x0001" />
+			<IDSymbol name="cmdidJennyRunAll" value="0x0101" />
+		</GuidSymbol>
+
+		<GuidSymbol name="guidJennyRunProjectCmdSet" value="{600CD3FB-7954-4C18-A4CA-87825916A468}">
+			<IDSymbol name="RunProjectMenuGroup" value="0x0002" />
+			<IDSymbol name="cmdidJennyRunProject" value="0x0102" />
+		</GuidSymbol>
+
+		<GuidSymbol name="guidImages" value="{A5C3CDA4-70A2-4DAE-B8E8-8F8B73DE0559}" >
+			<IDSymbol name="bmpPic1" value="1" />
+			<IDSymbol name="bmpPic2" value="2" />
+			<IDSymbol name="bmpPicSearch" value="3" />
+			<IDSymbol name="bmpPicX" value="4" />
+			<IDSymbol name="bmpPicArrows" value="5" />
+			<IDSymbol name="bmpPicStrikethrough" value="6" />
+		</GuidSymbol>
+
+	</Symbols>
+</CommandTable>
